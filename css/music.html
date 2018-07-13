@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <meta charset="UTF-8">
   <title>纯CSS3模拟跳动的音符效果</title>
-  /* 基于CSS3的音乐振动条实例 */
   <style>
-    *{margin:0;padding:0;list-style: none;}
-    body{background-color: #efefef;}
+    /* 基于CSS3的音乐振动条实例 */
+
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      background-color: #efefef;
+    }
+
     .demo-music {
       position: absolute;
       width: 100%;
@@ -80,6 +90,7 @@
       animation: waves 0.8s linear 0s infinite alternate;
       -webkit-animation: waves 0.8s linear 0s infinite alternate;
     }
+
     @-webkit-keyframes waves {
       10% {
         height: 20%;
@@ -117,19 +128,33 @@
     }
   </style>
 </head>
+
 <body>
   <div class="demo-music">
     <div class="music">
       <ul id="waves" class="movement">
-        <li class="li1"><span class="ani-li"></span></li>
-        <li class="li2"><span class="ani-li"></span></li>
-        <li class="li3"><span class="ani-li"></span></li>
-        <li class="li4"><span class="ani-li"></span></li>
-        <li class="li5"><span class="ani-li"></span></li>
-        <li class="li6"><span class="ani-li"></span></li>
+        <li class="li1">
+          <span class="ani-li"></span>
+        </li>
+        <li class="li2">
+          <span class="ani-li"></span>
+        </li>
+        <li class="li3">
+          <span class="ani-li"></span>
+        </li>
+        <li class="li4">
+          <span class="ani-li"></span>
+        </li>
+        <li class="li5">
+          <span class="ani-li"></span>
+        </li>
+        <li class="li6">
+          <span class="ani-li"></span>
+        </li>
       </ul>
       <div class="music-state"></div>
     </div>
-    </div>
+  </div>
 </body>
+
 </html>

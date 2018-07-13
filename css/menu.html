@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <title>菜单实例</title>
-    /* 基于CSS3的下拉菜单实例 */
-
     <style>
+        /* 基于CSS3的下拉菜单实例 */
+
         .demo-ul,
         .demo-ul li {
             list-style: none;
@@ -17,18 +17,18 @@
             /* 将默认的外边距去掉 */
             float: left;
         }
-    
+
         .demo-ul {
             margin-bottom: 300px;
         }
-    
+
         .demo-ul li {
             padding: 0 10px;
             width: 100px;
             background: #f90;
             position: relative;
         }
-    
+
         .demo-ul li a {
             display: block;
             height: 40px;
@@ -36,7 +36,7 @@
             text-align: center;
             transform: none
         }
-    
+
         .demo-ul li ul {
             position: absolute;
             width: 100%;
@@ -45,29 +45,30 @@
             transform: scaleY(0);
             overflow: hidden;
         }
-    
+
         .ul-transition ul {
             transform-origin: 0 0;
             transition: all .5s;
         }
-    
+
         .demo-ul li:hover ul {
             transform: scaleY(1);
         }
-    
+
         .demo-ul li ul li {
             float: none;
             background: #0099ff;
-    
+
         }
-    
+
         .main {
             position: absolute;
             /* 内容区域在菜单之下的位置，绝对定位 */
             top: 100px;
         }
-    </style>    
+    </style>
 </head>
+
 <body>
     <div class="demo-hover demo-ul t_c">
         <ul class="fllil">
