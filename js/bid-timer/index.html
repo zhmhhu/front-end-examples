@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css.css"></link>
+    <script type="text/javascript" src="./jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <title>投标计时软件</title>
+</head>
+
+<body>
+    <div class="title" id="title"></div>
+    <div id="context">
+        <div class="main" id="bidorderframe">
+            <div class="label"> 投标单位:</div>
+            <!-- 显示投标单位列表 -->
+            <div id="bidlist" class="list"></div>
+            <!-- <div class="label">
+                <input id="btnbidOrder" class="btn" type="button" value="开始" />
+            </div> -->
+            <div class="label">抽签序号:</div>
+            <div id="bidresult"></div>
+        </div>
+
+        <div class="main" id="raterlistframe">
+            <div class="label"> 评委老师:</div>
+            <!-- 显示投标单位列表 -->
+            <div id="raterlist" class="list"></div>
+            <div class="label">投标单位:</div>
+            <div id="bidOrderlist"></div>
+        </div>
+
+        <div class="main" id="timerframe">
+            <div>投标单位：
+                <select id="bidOrder" style="width:500px;"></select>
+            </div>
+            <div>评分阶段：陈述
+                <input type="text" id="time" value="15" style="width:25px" /> 分钟</div>
+            <div>
+                <input type="button" id="sid"  value="开始" />
+                <input type="button" id="tid"  value="暂停" />
+                <input type="button" id="gid" value="继续" />
+                <input type="button" id="clean" value="重置" />
+            </div>
+            <div>
+                <p id="hid" style="font-size: 60px">00:00</p>
+            </div>
+            <div>
+                <p class="footer">时间有限，请各位好好珍惜</p>
+            </div>
+        </div>
+
+        <div class="main" id="raterselectframe">
+            <div>投标单位：
+                <select id="bidOrder1" style="width:500px;"></select>
+            </div>
+            <div class="label">选择评委结果数量:
+                    <!-- <select id="raternum" style="width:25px;"></select> -->
+                    <input type="text" id="raternum" value="5" style="width:25px" /> 
+            </div>
+            <div class="label">
+                <input id="btnraterSelect" class="btn" type="button" value="开始" />
+            </div>
+            <div id="raterresult"></div>
+        </div>
+
+        <div class="main" id="answertimerframe">
+            <div>投标单位：
+                <select id="bidOrder2" style="width:500px;"></select>
+            </div>
+            <div>评委:
+                <select id="raternames" style="width:150px;"></select>
+                评分阶段：答辩
+                <input type="text" id="time2" value="3" style="width:25px" /> 分钟</div>
+            <div>
+                <input type="button" id="sid2"  value="开始" />
+                <input type="button" id="tid2"  value="暂停" />
+                <input type="button" id="gid2" value="继续" />
+                <input type="button" id="clean2" value="重置" />
+            </div>
+            <div>
+                <p id="hid2" style="font-size: 60px">00:00</p>
+            </div>
+            <div>
+                <p class="footer">时间有限，请各位好好珍惜</p>
+            </div>
+        </div>
+
+        <div class="main" id="resultframe">
+            <div>评分结果:</div>
+            <div>
+                <table id="resulttable" border="0">
+                    <tr>
+                        <th>投标单位</th>
+                        <th>得分</th>
+                    </tr>
+                </table>
+                <div class="label">
+                        <input id="btnresult" class="btn" type="button" value="保存" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stepbtn">
+        <div><a id="raterliststep">评委公示</a></div>
+        <div><a id="timerstep">投标单位陈述</a></div>
+        <div><a id="raterselectstep">抽取提问专家</a></div>
+        <div><a id="answertimerstep">投标单位答辩</a></div>
+        <div><a id="resultstep">分值公布</a></div>
+    </div>
+    <audio id="alarmAudio">
+            <source src="./song.mp3" type="audio/mpeg">
+             您的浏览器不支持提示音播放功能，请升级您的浏览器！
+    </audio>
+    <audio id="endAudio">
+            <source src="./end.mp3" type="audio/mpeg">
+             您的浏览器不支持提示音播放功能，请升级您的浏览器！
+    </audio>
+    <div class="copyright">
+        <p id="timestamp"></p>
+        <p>Copyright © 上海世纪东方物业服务管理办公室 版权所有</p>
+    </div>
+</body>
+<style>
+</style>
+<script type="text/javascript" src="./index.js"></script>
+</html>
